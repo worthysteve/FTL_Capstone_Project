@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <!--<link rel="stylesheet" href="css/icon-font.css">-->
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.comp.css') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='favicon/favicon1.png') }}" alt="fav icon"/>
+
+
+    <title>Sierra Leone | Predicting flood for early warning signs</title>
+  </head>
+
+  <body>
+    <!--
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+
+      <div class="navigation__background">&nbsp;</div>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>01</span>About Natous</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>02</span>Your benfits</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"
+              ><span>03</span>Popular tours</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>04</span>Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>05</span>Book now</a>
+          </li>
+        </ul>
+      </nav>
+    </div> 
+    -->
+
+    <header class="header">
+      <div class="header__logo-box">
+        <img src="{{ url_for('static', filename='img/logo1.png') }}" alt="Logo" class="header__logo" />
+
+      </div>
+
+      <div class="header__text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">predicting</span>
+          <span class="heading-primary--sub">flood for early warning</span>
+        </h1>
+
+        <a href="#section-book" class="btn btn--white btn--animated"
+          >Get Started</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-about">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">
+            Flood prediction model for resilient communities in Sierra Leone
+          </h2>
+        </div>
+
+        <div class="row">
+          <div class="col-1-of-2">
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Project goal
+            </h3>
+            <p class="paragraph">
+              <a
+              href="https://www.linkedin.com/in/worthysteven/"
+              class="btn-text"
+              target="_blank">Steven Daniel's</a> <a href="https://www.undp.org/policy-centre/istanbul/press-releases/frontier-tech-leaders-programme-kicks-first-machine-learning-bootcamp" class="btn-text"
+               target="_blank" class="btn-text">FTL </a>Machine Learning (AI) capstone project focuses on building a flood prediction model for flood-prone Sierra Leone. Leveraging key environmental data like rainfall patterns, humidity, and temperature, the model aims to provide accurate predictions, facilitating prompt mitigation measures during rainy seasons. The project is part of a <a href="https://www.undp.org/" class="btn-text" target="_blank">UNDP</a>-led bootcamp, in collaboration with the Istanbul International Center for Private Sector Development (<a href="https://www.undp.org/policy-centre/istanbul" class="btn-text" target="_blank">IICPSD</a>), the <a href="https://sdgailab.org/" class="btn-text target="_blank">SDG AI Lab</a>, the <a href="https://www.un.org/technologybank/" class="btn-text" target="_blank">UN Technology Bank</a>, and the <a href="https://www.linkedin.com/company/presidency-of-turkey-strategy-and-budget-office/" class="btn-text" target="_blank">Government of Turkiye</a>.
+            </p>
+
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Relevance to Sustainable development goals (SDGs)
+            </h3>
+            <p class="paragraph">
+             The project delivers timely flood predictions, directly contributing to resilient cities (<a href="https://sdgs.un.org/goals" class="btn-text" target="_blank">SDG 11</a>), addressing climate change impact (<a href="https://sdgs.un.org/goals" class="btn-text" target="_blank">SDG 13</a>), and advancing technological innovation for infrastructure resilience (<a href="https://sdgs.un.org/goals" class="btn-text" target="_blank">SDG 9 </a>). It also indirectly supports poverty reduction (<a href="https://sdgs.un.org/goals" class="btn-text" target="_blank">SDG 1 </a>) by mitigating natural disaster impacts and protecting communities.
+            </p>
+
+            <a href="https://www.undp.org/policy-centre/istanbul/press-releases/frontier-tech-leaders-programme-kicks-first-machine-learning-bootcamp" class="btn-text" target="_blank">Learn more &rarr;</a>
+          </div>
+          <div class="col-1-of-2">
+            <div class="composition">
+              <img
+                 srcset="{{ url_for('static', filename='img/nat-1.jpg') }} 300w, {{ url_for('static', filename='img/nat-1-large.jpg') }} 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo 1"
+                class="composition__photo composition__photo--p1"
+                src="{{ url_for('static', filename='img/nat-1-large.jpg') }}"
+              />
+
+              <img
+    srcset="{{ url_for('static', filename='img/nat-2.jpg') }} 300w, {{ url_for('static', filename='img/nat-2-large.jpg') }} 1000w"
+    sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+    alt="Photo 2"
+    class="composition__photo composition__photo--p2"
+    src="{{ url_for('static', filename='img/nat-2-large.jpg') }}"
+/>
+
+
+             <img
+    srcset="{{ url_for('static', filename='img/nat-3.jpg') }} 300w, {{ url_for('static', filename='img/nat-3-large.jpg') }} 1000w"
+    sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+    alt="Photo 3"
+    class="composition__photo composition__photo--p3"
+    src="{{ url_for('static', filename='img/nat-3-large.jpg') }}"
+/>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+ <section class="section-stories" id="section-stories">
+                <div class="bg-video">
+                    <video class="bg-video__content" autoplay muted loop>
+    <source src="{{ url_for('static', filename='video/video.mp4') }}" type="video/mp4">
+    <source src="{{ url_for('static', filename='video/video.webm') }}" type="video/webm">
+    Your browser is not supported!
+</video>
+
+                </div>
+
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
+                        Our forcast for today
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="story" id="result">
+                        
+                        <div class="story__text">
+                          {% if result %}
+                            <h1> {{ result }}</h1>
+                          {% else %}
+                            <h2>No result available at the moment. Please <a href="#section-book" class="btn-text"> click </a> the predict button to see a prediction.</h2>
+                           {% endif %}
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+  
+      <section class="section-book" id="section-book">
+        <div class="row">
+          <div class="book">
+            <div class="book__form">
+              <!--<form action="/predict" method="POST">-->
+              <form onsubmit="predict(); return false;">
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary">Click to predict flood</h2>
+                </div>
+
+                <div class="form__group">
+                  <label for="city" class="form__label"></label>
+                  <select id="city" name="city" class="form__select" required>
+                    <option value="" disabled selected>Select city</option>
+                    <option value="Freetown">Freetown</option>
+                    <option value="Bo">Bo</option>
+                    <option value="Kenema">Kenema</option>
+                    <option value="Koidu">Koidu</option>
+                    <option value="Makeni">Makeni</option>
+                    <option value="Magburaka">Magburaka</option>
+                    <option value="Port Loko">Port Loko</option>
+                    <option value="Bonthe">Bonthe</option>
+                    <option value="Moyamba">Moyamba</option>
+                    <option value="Moyamba Junction">Moyamba Junction</option>
+                    <option value="Kabala">Kabala</option>
+                    <option value="Falaba">Falaba</option>
+                    <option value="Magburaka">Magburaka</option>
+                    <option value="Mile 91">Mile 91</option>
+                    <option value="Lunsar">Lunsar</option>
+                    <option value="Kambia">Kambia</option>
+                    <option value="Taiama">Taiama</option>
+                    <option value="Njala">Njala</option>
+                    <option value="Mokonde">Mokonde</option>
+                    <option value="Pujehun">Pujehun</option>
+                    <option value="Kailahun">Kailahun</option>
+                    <option value="Lungi">Lungi</option>
+                    <option value="Mattru">Mattru</option>
+                    <option value="Masiska">Masiska</option>
+                    <option value="Bumpe">Bumpe</option>
+                    <option value="Waterloo">Waterloo</option>
+                    <option value="Daru">Daru</option>
+                  </select>
+                </div>
+
+                <div class="form__group">
+                  <button type="submit" class="btn btn--green" value="Predict">Predict</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <picture class="footer__logo">
+    <source
+        srcset="{{ url_for('static', filename='img/logo-small.png') }} 1x, {{ url_for('static', filename='img/logo-small2.png') }} 2x"
+        media="(max-width: 37.5em)"
+    />
+    <img
+        srcset="{{ url_for('static', filename='img/logof-full.png') }} 1x, {{ url_for('static', filename='img/logo-green-2x.png') }} 2x"
+        alt="Full logo"
+        src="{{ url_for('static', filename='img/logof-full2.png') }}"
+    />
+</picture>
+
+      </div>
+      <div class="row">
+        <h4>Powered by:</h4>
+        <div class="col-1-of-2">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item">
+    <a href="https://sdgailab.org/" class="footer__link" target="_blank">
+        <img src="{{ url_for('static', filename='img/sdg-ai-lab.jpg') }}" alt="SDG AI Lab logo"/>
+    </a>
+</li>
+<li class="footer__item">
+    <a href="https://www.un.org/technologybank/" class="footer__link" target="_blank">
+        <img src="{{ url_for('static', filename='img/un_technology_bank.jpeg') }}" alt="UN Technology Bank LOGO"/>
+    </a>
+</li>
+<li class="footer__item">
+    <a href="https://www.undp.org/policy-centre/istanbul" class="footer__link" target="_blank">
+        <img src="{{ url_for('static', filename='img/icpsd.jpeg') }}" alt="Istanbul International Center for Private Sector Development - ICPSD logo"/>
+    </a>
+</li>
+<li class="footer__item">
+    <a href="https://www.undp.org/" class="footer__link" target="_blank">
+        <img src="{{ url_for('static', filename='img/undp.png') }}" alt="UNDP logo"/>
+    </a>
+</li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-1-of-2">
+          <p class="footer__copyright">
+            Flood prediction model built by
+            <a
+              href="https://www.linkedin.com/in/worthysteven/"
+              class="footer__link"
+              target="_blank">Steven Daniel</a
+            >
+            for his <a href="https://www.undp.org/policy-centre/istanbul/press-releases/frontier-tech-leaders-programme-kicks-first-machine-learning-bootcamp" class="footer__link"
+               target="_blank"> Frontiers Tech Leaders Program </a
+            > bootcamp capstone project titled:
+            <a href="https://www.undp.org/policy-centre/istanbul/press-releases/frontier-tech-leaders-programme-kicks-first-machine-learning-bootcamp" class="footer__link"
+               target="_blank">Predictive Flood Modeling for Resilient Communities in Sierra
+              Leone.</a
+            >Copyright &copy; 2023 HTML & CSS designed by <a
+              href="https://codingheroes.io/resources/"
+              class="footer__link"
+              target="_blank"> Jonas Schmedtmann </a> and modified by <a
+              href="https://www.linkedin.com/in/worthysteven/"
+              class="footer__link"
+              target="_blank">Steven Daniel.</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+      </div>
+    </div>
+
+
+<script>
+    // Function to handle the form submission
+    function predict() {
+        // Get the selected city from the form
+        let city = document.getElementById('city').value;
+        
+        // Make a POST request to the /predict endpoint
+        fetch('/predict', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'city=' + encodeURIComponent(city),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Check if the 'result' property exists in the response
+            if ('result' in data) {
+                // Update the content of the 'result' div with the prediction message
+                document.getElementById('result').innerHTML = data.result;
+
+                  window.location.href = '#section-stories'; // Replace with the actual URL of your result page
+            } else if ('error' in data) {
+                // Handle the case where the response contains an error message
+                document.getElementById('result').innerHTML = 'Error: ' + data.error;
+
+            } else {
+                // Handle unexpected response format
+                document.getElementById('result').innerHTML = 'An error occurred. Please try again.';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // Log additional details about the error
+            console.error('Error Details:', error.message);
+            // Handle the error (e.g., display an error message)
+            document.getElementById('result').innerHTML = 'An error occurred. Please try again.';
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get the prediction result from Flask and convert it to an integer
+        var prediction = parseInt("{{ prediction }}");
+
+        // Adjust the font size based on the prediction
+        var resultHeader = document.getElementById("resultHeader");
+        resultHeader.style.fontSize = "2em";
+    });
+
+document.body.offsetHeight;
+
+document.addEventListener("DOMContentLoaded", function () {
+    let resultHeader = document.getElementById("resultHeader");
+
+    if (resultHeader) {
+        // Get the prediction result from Flask and convert it to an integer
+        let prediction = parseInt("{{ prediction }}");
+
+        // Adjust the font size based on the prediction
+        resultHeader.style.fontSize = prediction === 1 ? "2em" : "1em";
+
+        // Force reflow to ensure styles are applied
+        document.body.offsetHeight;
+    }
+});
+
+</script>
+  </body>
+</html>

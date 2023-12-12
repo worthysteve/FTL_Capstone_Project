@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <!--<link rel="stylesheet" href="css/icon-font.css">-->
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.comp.css') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='favicon/favicon1.png') }}" alt="fav icon"/>
+
+
+    <title>Sierra Leone | Predicting flood for early warning signs</title>
+  </head>
+
+  <body>
+      <section class="section-stories" id="result">
+                <div class="bg-video">
+                    <video class="bg-video__content" autoplay muted loop>
+    <source src="{{ url_for('static', filename='video/video.mp4') }}" type="video/mp4">
+    <source src="{{ url_for('static', filename='video/video.webm') }}" type="video/webm">
+    Your browser is not supported!
+</video>
+
+                </div>
+
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
+                        Our forcast for today
+                    </h2>
+                </div>
+
+                <div class="row" id="result">
+                    <div class="story">
+                        
+                        <div class="story__text">
+                          {% if result %}
+                            <h1 class="heading-tertiary u-margin-bottom-small">{{ result }}</h1>
+                          {% else %}
+                            <p>No result available at the moment.</p>
+                           {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <picture class="footer__logo">
+    <source
+        srcset="{{ url_for('static', filename='img/logo-small.png') }} 1x, {{ url_for('static', filename='img/logo-small2.png') }} 2x"
+        media="(max-width: 37.5em)"
+    />
+    <img
+        srcset="{{ url_for('static', filename='img/logof-full.png') }} 1x, {{ url_for('static', filename='img/logo-green-2x.png') }} 2x"
+        alt="Full logo"
+        src="{{ url_for('static', filename='img/logof-full2.png') }}"
+    />
+</picture>
+
+      </div>
+      <div class="row">
+        <h4>Powered by:</h4>
+        <div class="col-1-of-2">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item">
+    <a href="https://sdgailab.org/" class="footer__link" target="_blank">
+        <img src="{{ url_for('static', filename='img/sdg-ai-lab.jpg') }}" alt="SDG AI Lab logo"/>
+    </a>
+</li>
+<li class="footer__item">
+    <a href="https://www.un.org/technologybank/" class="footer__link" target="_blank">
+        <img src="{{ url_for('static', filename='img/un_technology_bank.jpeg') }}" alt="UN Technology Bank LOGO"/>
+    </a>
+</li>
+<li class="footer__item">
+    <a href="https://www.undp.org/policy-centre/istanbul" class="footer__link" target="_blank">
+        <img src="{{ url_for('static', filename='img/icpsd.jpeg') }}" alt="Istanbul International Center for Private Sector Development - ICPSD logo"/>
+    </a>
+</li>
+<li class="footer__item">
+    <a href="https://www.undp.org/" class="footer__link" target="_blank">
+        <img src="{{ url_for('static', filename='img/undp.png') }}" alt="UNDP logo"/>
+    </a>
+</li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-1-of-2">
+          <p class="footer__copyright">
+            Flood prediction model built by
+            <a
+              href="https://www.linkedin.com/in/worthysteven/"
+              class="footer__link"
+              target="_blank">Steven Daniel</a
+            >
+            for his <a href="https://www.undp.org/policy-centre/istanbul/press-releases/frontier-tech-leaders-programme-kicks-first-machine-learning-bootcamp" class="footer__link"
+               target="_blank"> Frontiers Tech Leaders Program </a
+            > bootcamp capstone project titled:
+            <a href="https://www.undp.org/policy-centre/istanbul/press-releases/frontier-tech-leaders-programme-kicks-first-machine-learning-bootcamp" class="footer__link"
+               target="_blank">Predictive Flood Modeling for Resilient Communities in Sierra
+              Leone.</a
+            >Copyright &copy; 2023 HTML & CSS designed by <a
+              href="https://codingheroes.io/resources/"
+              class="footer__link"
+              target="_blank"> Jonas Schmedtmann </a> and modified by <a
+              href="https://www.linkedin.com/in/worthysteven/"
+              class="footer__link"
+              target="_blank">Steven Daniel.</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+      </div>
+    </div>
+
+    {% comment %} <!-- ... other HTML content ... -->
+<script>
+    // Function to handle the form submission
+    function predict() {
+        // Get the selected city from the form
+        let city = document.getElementById('city').value;  // Assuming 'city' is the id of your form input
+        
+        // Make a POST request to the /predict endpoint
+        fetch('/predict', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'city=' + encodeURIComponent(city),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Update the content of the 'result' div with the prediction message
+            document.getElementById('result').innerHTML = data.result;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // Log additional details about the error
+            console.error('Error Details:', error.message);
+            // Handle the error (e.g., display an error message)
+            document.getElementById('result').innerHTML = 'An error occurred. Please try again.';
+        });
+    }
+</script> {% endcomment %}
+
+<!-- ... other HTML content ... -->
+
+  </body>
+</html>

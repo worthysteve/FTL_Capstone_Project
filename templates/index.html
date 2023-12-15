@@ -86,10 +86,10 @@
             </h3>
             <p class="paragraph">
               <a
-              href="https://www.linkedin.com/in/worthysteven/"
+              href="https://steven-daniel.netlify.app/"
               class="btn-text"
               target="_blank">Steven Daniel's</a> <a href="https://www.undp.org/policy-centre/istanbul/press-releases/frontier-tech-leaders-programme-kicks-first-machine-learning-bootcamp" class="btn-text"
-               target="_blank" class="btn-text">FTL </a>Machine Learning (AI) capstone project focuses on building a flood prediction model for flood-prone Sierra Leone. Leveraging key environmental data like rainfall patterns, humidity, and temperature, the model aims to provide accurate predictions, facilitating prompt mitigation measures during rainy seasons. The project is part of a <a href="https://www.undp.org/" class="btn-text" target="_blank">UNDP</a>-led bootcamp, in collaboration with the Istanbul International Center for Private Sector Development (<a href="https://www.undp.org/policy-centre/istanbul" class="btn-text" target="_blank">IICPSD</a>), the <a href="https://sdgailab.org/" class="btn-text target="_blank">SDG AI Lab</a>, the <a href="https://www.un.org/technologybank/" class="btn-text" target="_blank">UN Technology Bank</a>, and the <a href="https://www.linkedin.com/company/presidency-of-turkey-strategy-and-budget-office/" class="btn-text" target="_blank">Government of Turkiye</a>.
+               target="_blank" class="btn-text">FTL </a>Machine Learning (AI) capstone project focuses on building a flood prediction model for flood-prone Sierra Leone. Leveraging key environmental data like rainfall patterns, humidity, and temperature, the model aims to provide accurate predictions, facilitating prompt mitigation measures during rainy seasons. The project is part of a <a href="https://www.undp.org/" class="btn-text" target="_blank">UNDP</a>, Istanbul International Center for Private Sector Development (<a href="https://www.undp.org/policy-centre/istanbul" class="btn-text" target="_blank">IICPSD</a>)-led, bootcamp, in collaboration with the  the <a href="https://sdgailab.org/" class="btn-text target="_blank">SDG AI Lab</a>, the <a href="https://www.un.org/technologybank/" class="btn-text" target="_blank">UN Technology Bank</a>, and the <a href="https://www.linkedin.com/company/presidency-of-turkey-strategy-and-budget-office/" class="btn-text" target="_blank">Government of Turkiye</a>.
             </p>
 
             <h3 class="heading-tertiary u-margin-bottom-small">
@@ -227,7 +227,7 @@
         media="(max-width: 37.5em)"
     />
     <img
-        srcset="{{ url_for('static', filename='img/logof-full.png') }} 1x, {{ url_for('static', filename='img/logo-green-2x.png') }} 2x"
+        srcset="{{ url_for('static', filename='img/logof-full.png') }} 1x, {{ url_for('static', filename='img/logo-small2.png') }} 2x"
         alt="Full logo"
         src="{{ url_for('static', filename='img/logof-full2.png') }}"
     />
@@ -274,14 +274,14 @@
             for his <a href="https://www.undp.org/policy-centre/istanbul/press-releases/frontier-tech-leaders-programme-kicks-first-machine-learning-bootcamp" class="footer__link"
                target="_blank"> Frontiers Tech Leaders Program </a
             > bootcamp capstone project titled:
-            <a href="https://www.undp.org/policy-centre/istanbul/press-releases/frontier-tech-leaders-programme-kicks-first-machine-learning-bootcamp" class="footer__link"
+            <a href="https://sierra-leone-flood-prediction.onrender.com/" class="footer__link"
                target="_blank">Predictive Flood Modeling for Resilient Communities in Sierra
               Leone.</a
-            >Copyright &copy; 2023 HTML & CSS designed by <a
+            >Copyright &copy; <span class="year">2030</span> HTML & CSS designed by <a
               href="https://codingheroes.io/resources/"
               class="footer__link"
               target="_blank"> Jonas Schmedtmann </a> and modified by <a
-              href="https://www.linkedin.com/in/worthysteven/"
+              href="https://steven-daniel.netlify.app/"
               class="footer__link"
               target="_blank">Steven Daniel.</a
             >
@@ -363,6 +363,12 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.offsetHeight;
     }
 });
+
+// SET CURRENT YEAR
+const yearEL = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+console.log(currentYear);
+yearEL.textContent = currentYear;
 
 </script>
   </body>

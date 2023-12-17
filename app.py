@@ -171,7 +171,7 @@ def predict():
                 if binary_prediction == 1:
                     message = f"There is a likelihood that it will flood in {city} today! Check the weather <a href='{city_url}' target='_blank'>here</a>."
                 else:
-                    message = f"There is no likelihood of flooding in {city} the today! Check the weather <a href='{city_url}' target='_blank'>here</a>."
+                    message = f"There is no likelihood of flooding in {city} today! Check the weather <a href='{city_url}' target='_blank'>here</a>."
                     
                 # Store the prediction result in the database
                 store_prediction_in_database(city, binary_prediction, message)
